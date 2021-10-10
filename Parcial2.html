@@ -1,0 +1,33 @@
+<input type=text size=1 id='nf'/>
+<button onclick='main()'>Realizar</button>
+<canvas id='canvas' width=1400 height=800>
+<script>
+ function main() {
+ var canvas = document.getElementById('canvas')
+ ctx = canvas.getContext('2d');
+ var nc = parseInt(document.getElementById('nf').value)
+ 	  
+ for (var x = 0; x < nc; x++) {
+ for (var n = 0; n < 1; n++) {
+ ctx.fillStyle = 'rgb('+Math.floor(255-(255*x)/nc)+','+
+ Math.floor(0)+',0)';
+ ctx.fillRect(10, x*(650/nc), 350, (650/nc));
+}
+}
+ for (var x = 0; x < nc; x++) {
+ for (var n = 0; n < 1; n++) {
+ ctx.fillStyle = 'rgb(' + Math.floor(25 ) + ',' +
+ Math.floor(255 - (255 * x)/nc) + ', 0)';
+ ctx.fillRect(450, x*(650/nc), 350,(650/nc));
+}
+}
+ for (var x = 0; x < nc; x++) {
+ for (var n = 0; n < 1; n++) 
+{
+ ctx.fillStyle = 'rgb(' + Math.floor(0 ) + ',' +
+ Math.floor(0) + ',' + Math.floor(255- (255 * x)/nc)+')';
+ ctx.fillRect(900, x*(650/nc), 350, (650/nc));
+}
+}
+}
+</script>
